@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JS基础教程 | 数组</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/es5/assets/css/34.styles.cfb38c2b.css" as="style"><link rel="preload" href="/es5/assets/js/app.87f9b798.js" as="script"><link rel="preload" href="/es5/assets/js/24.06656e05.js" as="script"><link rel="prefetch" href="/es5/assets/js/18.ee281ba0.js"><link rel="prefetch" href="/es5/assets/js/1.6e0b99c6.js"><link rel="prefetch" href="/es5/assets/js/2.dbb55f61.js"><link rel="prefetch" href="/es5/assets/js/3.53cfdbac.js"><link rel="prefetch" href="/es5/assets/js/4.ffa6d8ee.js"><link rel="prefetch" href="/es5/assets/js/5.9ece6bc8.js"><link rel="prefetch" href="/es5/assets/js/6.1396541c.js"><link rel="prefetch" href="/es5/assets/js/7.077f3231.js"><link rel="prefetch" href="/es5/assets/js/8.e027353b.js"><link rel="prefetch" href="/es5/assets/js/9.f9e275c6.js"><link rel="prefetch" href="/es5/assets/js/10.f46c078f.js"><link rel="prefetch" href="/es5/assets/js/11.10f6eed7.js"><link rel="prefetch" href="/es5/assets/js/12.eedbbf62.js"><link rel="prefetch" href="/es5/assets/js/13.05b1ae50.js"><link rel="prefetch" href="/es5/assets/js/14.42486689.js"><link rel="prefetch" href="/es5/assets/js/15.f2c5f3bc.js"><link rel="prefetch" href="/es5/assets/js/16.2036f842.js"><link rel="prefetch" href="/es5/assets/js/17.cd943e88.js"><link rel="prefetch" href="/es5/assets/js/0.3dd5acd6.js"><link rel="prefetch" href="/es5/assets/js/19.1a7bafab.js"><link rel="prefetch" href="/es5/assets/js/20.8b259af0.js"><link rel="prefetch" href="/es5/assets/js/21.14b47bf2.js"><link rel="prefetch" href="/es5/assets/js/22.dcd78a4e.js"><link rel="prefetch" href="/es5/assets/js/23.7fb84633.js"><link rel="prefetch" href="/es5/assets/js/25.f6f7fcdb.js"><link rel="prefetch" href="/es5/assets/js/26.b305926a.js"><link rel="prefetch" href="/es5/assets/js/27.1b2e58ac.js"><link rel="prefetch" href="/es5/assets/js/28.3a7b5cdf.js"><link rel="prefetch" href="/es5/assets/js/29.d657fdfa.js"><link rel="prefetch" href="/es5/assets/js/30.a5a4e6e4.js"><link rel="prefetch" href="/es5/assets/js/31.6157758a.js"><link rel="prefetch" href="/es5/assets/js/32.990ff7d0.js"><link rel="prefetch" href="/es5/assets/js/33.4130e1ac.js">
+    <link rel="stylesheet" href="/es5/assets/css/34.styles.cfb38c2b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/es5/" class="home-link router-link-active"><!----><span class="site-name">
+      JS基础教程
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><!----></div></header><div class="sidebar-mask"></div><div class="sidebar"><!----><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>导论</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>语法</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/es5/page2_1.html" class="sidebar-link">基本语法</a></li><li><a href="/es5/page2_2.html" class="sidebar-link">数据类型</a></li><li><a href="/es5/page2_3.html" class="sidebar-link">数值</a></li><li><a href="/es5/page2_4.html" class="sidebar-link">字符串</a></li><li><a href="/es5/page2_5.html" class="sidebar-link">对象</a></li><li><a href="/es5/page2_6.html" class="active sidebar-link">数组</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/es5/page2_6.html#定义" class="sidebar-link">定义</a></li><li class="sidebar-sub-header"><a href="/es5/page2_6.html#数组的本质" class="sidebar-link">数组的本质</a></li><li class="sidebar-sub-header"><a href="/es5/page2_6.html#length-属性" class="sidebar-link">length 属性</a></li><li class="sidebar-sub-header"><a href="/es5/page2_6.html#in-运算符" class="sidebar-link">in 运算符</a></li><li class="sidebar-sub-header"><a href="/es5/page2_6.html#for-in-循环和数组的遍历" class="sidebar-link">for...in 循环和数组的遍历</a></li><li class="sidebar-sub-header"><a href="/es5/page2_6.html#数组的空位" class="sidebar-link">数组的空位</a></li><li class="sidebar-sub-header"><a href="/es5/page2_6.html#类似数组的对象" class="sidebar-link">类似数组的对象</a></li></ul></li><li><a href="/es5/page2_7.html" class="sidebar-link">函数</a></li><li><a href="/es5/page2_8.html" class="sidebar-link">运算符</a></li><li><a href="/es5/page2_9.html" class="sidebar-link">数据类型转换</a></li><li><a href="/es5/page2_10.html" class="sidebar-link">错误处理机制</a></li><li><a href="/es5/page2_11.html" class="sidebar-link">JavaScript 编程风格</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>标准库</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>DOM 模型</span><span class="arrow right"></span></p><!----></div></li></ul></div><div class="page"><div class="content"><h1 id="数组"><a href="#数组" aria-hidden="true" class="header-anchor">#</a> 数组</h1><h2 id="定义"><a href="#定义" aria-hidden="true" class="header-anchor">#</a> 定义</h2><p>数组（array）是按次序排列的一组值。每个值的位置都有编号（从0开始），整个数组用方括号表示。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre><p>上面代码中的<code>a</code>、<code>b</code>、<code>c</code>就构成一个数组，两端的方括号是数组的标志。<code>a</code>是0号位置，<code>b</code>是1号位置，<code>c</code>是2号位置。</p><p>除了在定义时赋值，数组也可以先定义后赋值。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'b'</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'c'</span><span class="token punctuation">;</span>
+</code></pre><p>任何类型的数据，都可以放入数组。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token comment">// Object {a: 1}</span>
+arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">// [1, 2, 3]</span>
+arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token comment">// function (){return true;}</span>
+</code></pre><p>上面数组<code>arr</code>的3个成员依次是对象、数组、函数。</p><p>如果数组的元素还是数组，就形成了多维数组。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">// 2</span>
+a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">// 4</span>
+</code></pre><h2 id="数组的本质"><a href="#数组的本质" aria-hidden="true" class="header-anchor">#</a> 数组的本质</h2><p>本质上，数组属于一种特殊的对象。<code>typeof</code>运算符会返回数组的类型是<code>object</code>。</p><pre class="language-javascript"><code><span class="token keyword">typeof</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token comment">// &quot;object&quot;</span>
+</code></pre><p>上面代码表明，<code>typeof</code>运算符认为数组的类型就是对象。</p><p>数组的特殊性体现在，它的键名是按次序排列的一组整数（0，1，2...）。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+<span class="token comment">// [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;]</span>
+</code></pre><p>上面代码中，<code>Object.keys</code>方法返回数组的所有键名。可以看到数组的键名就是整数0、1、2。</p><p>由于数组成员的键名是固定的（默认总是0、1、2...），因此数组不用为每个元素指定键名，而对象的每个成员都必须指定键名。JavaScript 语言规定，对象的键名一律为字符串，所以，数组的键名其实也是字符串。之所以可以用数值读取，是因为非字符串的键名会被转为字符串。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+arr<span class="token punctuation">[</span><span class="token string">'0'</span><span class="token punctuation">]</span> <span class="token comment">// 'a'</span>
+arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token comment">// 'a'</span>
+</code></pre><p>上面代码分别用数值和字符串作为键名，结果都能读取数组。原因是数值键名被自动转为了字符串。</p><p>注意，这点在赋值时也成立。如果一个值总是先转成字符串，再进行赋值。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+a<span class="token punctuation">[</span><span class="token number">1.00</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">// 6</span>
+</code></pre><p>上面代码中，由于<code>1.00</code>转成字符串是<code>1</code>，所以通过数字键<code>1</code>可以读取值。</p><p>上一章说过，对象有两种读取成员的方法：点结构（<code>object.key</code>）和方括号结构（<code>object[key]</code>）。但是，对于数值的键名，不能使用点结构。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">.</span><span class="token number">0</span> <span class="token comment">// SyntaxError</span>
+</code></pre><p>上面代码中，<code>arr.0</code>的写法不合法，因为单独的数值不能作为标识符（identifier）。所以，数组成员只能用方括号<code>arr[0]</code>表示（方括号是运算符，可以接受数值）。</p><h2 id="length-属性"><a href="#length-属性" aria-hidden="true" class="header-anchor">#</a> length 属性</h2><p>数组的<code>length</code>属性，返回数组的成员数量。</p><pre class="language-javascript"><code><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length <span class="token comment">// 3</span>
+</code></pre><p>JavaScript 使用一个32位整数，保存数组的元素个数。这意味着，数组成员最多只有 4294967295 个（2<sup>32</sup> - 1）个，也就是说<code>length</code>属性的最大值就是 4294967295。</p><p>只要是数组，就一定有<code>length</code>属性。该属性是一个动态的值，等于键名中的最大整数加上<code>1</code>。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">.</span>length <span class="token comment">// 2</span>
+
+arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'c'</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">.</span>length <span class="token comment">// 3</span>
+
+arr<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'d'</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">.</span>length <span class="token comment">// 10</span>
+
+arr<span class="token punctuation">[</span><span class="token number">1000</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'e'</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">.</span>length <span class="token comment">// 1001</span>
+</code></pre><p>上面代码表示，数组的数字键不需要连续，<code>length</code>属性的值总是比最大的那个整数键大<code>1</code>。另外，这也表明数组是一种动态的数据结构，可以随时增减数组的成员。</p><p><code>length</code>属性是可写的。如果人为设置一个小于当前成员个数的值，该数组的成员会自动减少到<code>length</code>设置的值。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span> <span class="token punctuation">]</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">.</span>length <span class="token comment">// 3</span>
+
+arr<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+arr <span class="token comment">// [&quot;a&quot;, &quot;b&quot;]</span>
+</code></pre><p>上面代码表示，当数组的<code>length</code>属性设为2（即最大的整数键只能是1）那么整数键2（值为<code>c</code>）就已经不在数组中了，被自动删除了。</p><p>清空数组的一个有效方法，就是将<code>length</code>属性设为0。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span> <span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+arr<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+arr <span class="token comment">// []</span>
+</code></pre><p>如果人为设置<code>length</code>大于当前元素个数，则数组的成员数量会增加到这个值，新增的位置都是空位。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+a<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">// undefined</span>
+</code></pre><p>上面代码表示，当<code>length</code>属性设为大于数组个数时，读取新增的位置都会返回<code>undefined</code>。</p><p>如果人为设置<code>length</code>为不合法的值，JavaScript 会报错。</p><pre class="language-javascript"><code><span class="token comment">// 设置负值</span>
+<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token comment">// RangeError: Invalid array length</span>
+
+<span class="token comment">// 数组元素个数大于等于2的32次方</span>
+<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">)</span>
+<span class="token comment">// RangeError: Invalid array length</span>
+
+<span class="token comment">// 设置字符串</span>
+<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token string">'abc'</span>
+<span class="token comment">// RangeError: Invalid array length</span>
+</code></pre><p>值得注意的是，由于数组本质上是一种对象，所以可以为数组添加属性，但是这不影响<code>length</code>属性的值。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+a<span class="token punctuation">[</span><span class="token string">'p'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'abc'</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span>length <span class="token comment">// 0</span>
+
+a<span class="token punctuation">[</span><span class="token number">2.1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'abc'</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span>length <span class="token comment">// 0</span>
+</code></pre><p>上面代码将数组的键分别设为字符串和小数，结果都不影响<code>length</code>属性。因为，<code>length</code>属性的值就是等于最大的数字键加1，而这个数组没有整数键，所以<code>length</code>属性保持为<code>0</code>。</p><p>如果数组的键名是添加超出范围的数值，该键名会自动转为字符串。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">[</span>Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'b'</span><span class="token punctuation">;</span>
+
+arr<span class="token punctuation">.</span>length <span class="token comment">// 0</span>
+arr<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">// &quot;a&quot;</span>
+arr<span class="token punctuation">[</span><span class="token number">4294967296</span><span class="token punctuation">]</span> <span class="token comment">// &quot;b&quot;</span>
+</code></pre><p>上面代码中，我们为数组<code>arr</code>添加了两个不合法的数字键，结果<code>length</code>属性没有发生变化。这些数字键都变成了字符串键名。最后两行之所以会取到值，是因为取键值时，数字键名会默认转为字符串。</p><h2 id="in-运算符"><a href="#in-运算符" aria-hidden="true" class="header-anchor">#</a> in 运算符</h2><p>检查某个键名是否存在的运算符<code>in</code>，适用于对象，也适用于数组。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span> <span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token number">2</span> <span class="token keyword">in</span> arr  <span class="token comment">// true</span>
+<span class="token string">'2'</span> <span class="token keyword">in</span> arr <span class="token comment">// true</span>
+<span class="token number">4</span> <span class="token keyword">in</span> arr <span class="token comment">// false</span>
+</code></pre><p>上面代码表明，数组存在键名为<code>2</code>的键。由于键名都是字符串，所以数值<code>2</code>会自动转成字符串。</p><p>注意，如果数组的某个位置是空位，<code>in</code>运算符返回<code>false</code>。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">;</span>
+
+<span class="token number">100</span> <span class="token keyword">in</span> arr <span class="token comment">// true</span>
+<span class="token number">1</span> <span class="token keyword">in</span> arr <span class="token comment">// false</span>
+</code></pre><p>上面代码中，数组<code>arr</code>只有一个成员<code>arr[100]</code>，其他位置的键名都会返回<code>false</code>。</p><h2 id="for-in-循环和数组的遍历"><a href="#for-in-循环和数组的遍历" aria-hidden="true" class="header-anchor">#</a> for...in 循环和数组的遍历</h2><p><code>for...in</code>循环不仅可以遍历对象，也可以遍历数组，毕竟数组只是一种特殊对象。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">in</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 1</span>
+<span class="token comment">// 2</span>
+<span class="token comment">// 3</span>
+</code></pre><p>但是，<code>for...in</code>不仅会遍历数组所有的数字键，还会遍历非数字键。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span>foo <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 0</span>
+<span class="token comment">// 1</span>
+<span class="token comment">// 2</span>
+<span class="token comment">// foo</span>
+</code></pre><p>上面代码在遍历数组时，也遍历到了非整数键<code>foo</code>。所以，不推荐使用<code>for...in</code>遍历数组。</p><p>数组的遍历可以考虑使用<code>for</code>循环或<code>while</code>循环。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// for循环</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// while循环</span>
+<span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  i<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> l <span class="token operator">=</span> a<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>l<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>上面代码是三种遍历数组的写法。最后一种写法是逆向遍历，即从最后一个元素向第一个元素遍历。</p><p>数组的<code>forEach</code>方法，也可以用来遍历数组，详见《标准库》的 Array 对象一章。</p><pre class="language-javascript"><code><span class="token keyword">var</span> colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'red'</span><span class="token punctuation">,</span> <span class="token string">'green'</span><span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+colors<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>color<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// red</span>
+<span class="token comment">// green</span>
+<span class="token comment">// blue</span>
+</code></pre><h2 id="数组的空位"><a href="#数组的空位" aria-hidden="true" class="header-anchor">#</a> 数组的空位</h2><p>当数组的某个位置是空元素，即两个逗号之间没有任何值，我们称该数组存在空位（hole）。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span>length <span class="token comment">// 3</span>
+</code></pre><p>上面代码表明，数组的空位不影响<code>length</code>属性。</p><p>需要注意的是，如果最后一个元素后面有逗号，并不会产生空位。也就是说，有没有这个逗号，结果都是一样的。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+a<span class="token punctuation">.</span>length <span class="token comment">// 3</span>
+a <span class="token comment">// [1, 2, 3]</span>
+</code></pre><p>上面代码中，数组最后一个成员后面有一个逗号，这不影响<code>length</code>属性的值，与没有这个逗号时效果一样。</p><p>数组的空位是可以读取的，返回<code>undefined</code>。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">,</span> <span class="token punctuation">,</span> <span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">// undefined</span>
+</code></pre><p>使用<code>delete</code>命令删除一个数组成员，会形成空位，并且不会影响<code>length</code>属性。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">delete</span> a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">// undefined</span>
+a<span class="token punctuation">.</span>length <span class="token comment">// 3</span>
+</code></pre><p>上面代码用<code>delete</code>命令删除了数组的第二个元素，这个位置就形成了空位，但是对<code>length</code>属性没有影响。也就是说，<code>length</code>属性不过滤空位。所以，使用<code>length</code>属性进行数组遍历，一定要非常小心。</p><p>数组的某个位置是空位，与某个位置是<code>undefined</code>，是不一样的。如果是空位，使用数组的<code>forEach</code>方法、<code>for...in</code>结构、以及<code>Object.keys</code>方法进行遍历，空位都会被跳过。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">,</span> <span class="token punctuation">,</span> <span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+a<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token string">'. '</span> <span class="token operator">+</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 不产生任何输出</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">in</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 不产生任何输出</span>
+
+Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token comment">// []</span>
+</code></pre><p>如果某个位置是<code>undefined</code>，遍历的时候就不会被跳过。</p><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span>undefined<span class="token punctuation">,</span> undefined<span class="token punctuation">,</span> undefined<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+a<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token string">'. '</span> <span class="token operator">+</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 0. undefined</span>
+<span class="token comment">// 1. undefined</span>
+<span class="token comment">// 2. undefined</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">in</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 0</span>
+<span class="token comment">// 1</span>
+<span class="token comment">// 2</span>
+
+Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token comment">// ['0', '1', '2']</span>
+</code></pre><p>这就是说，空位就是数组没有这个元素，所以不会被遍历到，而<code>undefined</code>则表示数组有这个元素，值是<code>undefined</code>，所以遍历不会跳过。</p><h2 id="类似数组的对象"><a href="#类似数组的对象" aria-hidden="true" class="header-anchor">#</a> 类似数组的对象</h2><p>如果一个对象的所有键名都是正整数或零，并且有<code>length</code>属性，那么这个对象就很像数组，语法上称为“类似数组的对象”（array-like object）。</p><pre class="language-javascript"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token number">0</span><span class="token punctuation">:</span> <span class="token string">'a'</span><span class="token punctuation">,</span>
+  <span class="token number">1</span><span class="token punctuation">:</span> <span class="token string">'b'</span><span class="token punctuation">,</span>
+  <span class="token number">2</span><span class="token punctuation">:</span> <span class="token string">'c'</span><span class="token punctuation">,</span>
+  length<span class="token punctuation">:</span> <span class="token number">3</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+obj<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token comment">// 'a'</span>
+obj<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">// 'b'</span>
+obj<span class="token punctuation">.</span>length <span class="token comment">// 3</span>
+obj<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'d'</span><span class="token punctuation">)</span> <span class="token comment">// TypeError: obj.push is not a function</span>
+</code></pre><p>上面代码中，对象<code>obj</code>就是一个类似数组的对象。但是，“类似数组的对象”并不是数组，因为它们不具备数组特有的方法。对象<code>obj</code>没有数组的<code>push</code>方法，使用该方法就会报错。</p><p>“类似数组的对象”的根本特征，就是具有<code>length</code>属性。只要有<code>length</code>属性，就可以认为这个对象类似于数组。但是有一个问题，这种<code>length</code>属性不是动态值，不会随着成员的变化而变化。</p><pre class="language-javascript"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  length<span class="token punctuation">:</span> <span class="token number">0</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'d'</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">.</span>length <span class="token comment">// 0</span>
+</code></pre><p>上面代码为对象<code>obj</code>添加了一个数字键，但是<code>length</code>属性没变。这就说明了<code>obj</code>不是数组。</p><p>典型的“类似数组的对象”是函数的<code>arguments</code>对象，以及大多数 DOM 元素集，还有字符串。</p><pre class="language-javascript"><code><span class="token comment">// arguments对象</span>
+<span class="token keyword">function</span> <span class="token function">args</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> arguments <span class="token punctuation">}</span>
+<span class="token keyword">var</span> arrayLike <span class="token operator">=</span> <span class="token function">args</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+arrayLike<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token comment">// 'a'</span>
+arrayLike<span class="token punctuation">.</span>length <span class="token comment">// 2</span>
+arrayLike <span class="token keyword">instanceof</span> <span class="token class-name">Array</span> <span class="token comment">// false</span>
+
+<span class="token comment">// DOM元素集</span>
+<span class="token keyword">var</span> elts <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'h3'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+elts<span class="token punctuation">.</span>length <span class="token comment">// 3</span>
+elts <span class="token keyword">instanceof</span> <span class="token class-name">Array</span> <span class="token comment">// false</span>
+
+<span class="token comment">// 字符串</span>
+<span class="token string">'abc'</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">// 'b'</span>
+<span class="token string">'abc'</span><span class="token punctuation">.</span>length <span class="token comment">// 3</span>
+<span class="token string">'abc'</span> <span class="token keyword">instanceof</span> <span class="token class-name">Array</span> <span class="token comment">// false</span>
+</code></pre><p>上面代码包含三个例子，它们都不是数组（<code>instanceof</code>运算符返回<code>false</code>），但是看上去都非常像数组。</p><p>数组的<code>slice</code>方法可以将“类似数组的对象”变成真正的数组。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> Array<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>slice<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>arrayLike<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>除了转为真正的数组，“类似数组的对象”还有一个办法可以使用数组的方法，就是通过<code>call()</code>把数组的方法放到对象上面。</p><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">print</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index <span class="token operator">+</span> <span class="token string">' : '</span> <span class="token operator">+</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+Array<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>forEach<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>arrayLike<span class="token punctuation">,</span> print<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>上面代码中，<code>arrayLike</code>代表一个类似数组的对象，本来是不可以使用数组的<code>forEach()</code>方法的，但是通过<code>call()</code>，可以把<code>forEach()</code>嫁接到<code>arrayLike</code>上面调用。</p><p>下面的例子就是通过这种方法，在<code>arguments</code>对象上面调用<code>forEach</code>方法。</p><pre class="language-javascript"><code><span class="token comment">// forEach 方法</span>
+<span class="token keyword">function</span> <span class="token function">logArgs</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Array<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>forEach<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>arguments<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>elem<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token string">'. '</span> <span class="token operator">+</span> elem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 等同于 for 循环</span>
+<span class="token keyword">function</span> <span class="token function">logArgs</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arguments<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token string">'. '</span> <span class="token operator">+</span> arguments<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>字符串也是类似数组的对象，所以也可以用<code>Array.prototype.forEach.call</code>遍历。</p><pre class="language-javascript"><code>Array<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>forEach<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token string">'abc'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>chr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>chr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// a</span>
+<span class="token comment">// b</span>
+<span class="token comment">// c</span>
+</code></pre><p>注意，这种方法比直接使用数组原生的<code>forEach</code>要慢，所以最好还是先将“类似数组的对象”转为真正的数组，然后再直接调用数组的<code>forEach</code>方法。</p><pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> Array<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>slice<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token string">'abc'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>chr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>chr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// a</span>
+<span class="token comment">// b</span>
+<span class="token comment">// c</span>
+</code></pre></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/es5/page2_5.html" class="prev">
+          对象
+        </a></span><span class="next"><a href="/es5/page2_7.html">
+          函数
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/es5/assets/js/24.06656e05.js" defer></script><script src="/es5/assets/js/app.87f9b798.js" defer></script>
+  </body>
+</html>
